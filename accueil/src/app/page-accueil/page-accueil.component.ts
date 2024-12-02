@@ -1,3 +1,4 @@
+import { NgFor } from '@angular/common';
 import { Component } from '@angular/core';
 type Recommendations = {
   destinations: string,
@@ -7,17 +8,29 @@ type Recommendations = {
 @Component({
   selector: 'app-page-accueil',
   standalone: true,
-  imports: [],
+  imports: [NgFor],
   templateUrl: './page-accueil.component.html',
   styleUrl: './page-accueil.component.css'
 })
 export class PageAccueilComponent {
-  recommendations: any[] = [
+  recommendations = [
     {
-      image:  'favicon.ico',
-      destination: 'Maldives',
+      title: 'Maldives',
       description:
-        'Plages de sable blanc, lagons turquoise et couchers de soleil spectaculaires : les Maldives sont un rêve exotique inoubliable.',     
-    },   
+        'Plages de sable blanc, lagons turquoise et couchers de soleil spectaculaires : les Maldives sont un rêve exotique inoubliable.',
+      image: 'accueil/public/maldive.jpg',
+    },
+    {
+      title: 'Maldives',
+      description:
+        'Plages de sable blanc, lagons turquoise et couchers de soleil spectaculaires : les Maldives sont un rêve exotique inoubliable.',
+      image: 'accueil/public/maldive.jpg',
+    },
+    {
+      title: 'Maldives',
+      description:
+        'Plages de sable blanc, lagons turquoise et couchers de soleil spectaculaires : les Maldives sont un rêve exotique inoubliable.',
+      image: 'accueil/public/maldive.jpg',
+    },
   ];
 }

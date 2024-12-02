@@ -52,30 +52,17 @@
         <button type="submit" class="btn-principal">Rechercher</button>
       </form>
     </div>
-  
+    
     <div class="recommendations">
       <h2>Nos recommandations</h2>
-      <p>azeaze</p>
-      <!--
-      <div class="recommendation-card" *ngFor="let destination of recommendations">
-        <img src="assets/maldives.jpg" alt="Image des Maldives" />
+      <div class="recommendation-card" *ngFor="let item of recommendations">
+        <img src= "accueil/public/maldive.jpg" />
         <div class="recommendation-content">
-          <h3>Maldives</h3>
-          <p>
-            Plages de sable blanc, lagons turquoise et couchers de soleil spectaculaires : les Maldives sont un rêve exotique inoubliable.
-          </p>
-          <button class="btn-principal">Réserver</button>
+          <h3>{{ item.title }}</h3>
+          <p>{{ item.description }}</p>
+          <button class="book-button">Réserver</button>
         </div>
-      </div>-->
-      <div class="recommendation-card">
-        <!--@for ( let destination of recommandations; track $index){-->
-          <div><!--
-            <img src={{recommendations.image}} />
-            <h3>{{recommendations.destination}}</h3>
-            <p>{{recommendations.description}}</p>-->
-          </div>
-        <!--}-->
       </div>
-    </div>
+    </div>  
   </div>
   
