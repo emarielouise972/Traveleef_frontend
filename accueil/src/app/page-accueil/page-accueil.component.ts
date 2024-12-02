@@ -26,11 +26,5 @@ export class PageAccueilComponent {
         'Plages de sable blanc, lagons turquoise et couchers de soleil spectaculaires : les Maldives sont un rêve exotique inoubliable.',
       image: 'accueil/public/maldive.jpg',
     },
-    {
-      title: 'Maldives',
-      description:
-        'Plages de sable blanc, lagons turquoise et couchers de soleil spectaculaires : les Maldives sont un rêve exotique inoubliable.',
-      image: 'accueil/public/maldive.jpg',
-    },
   ];
 }
