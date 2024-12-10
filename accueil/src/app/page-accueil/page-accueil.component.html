@@ -1,50 +1,89 @@
 <p>page-accueil works!</p>
 <div class="container">
+  <div class="container">
     <div class="search-section">
-      <form>
+      <form (ngSubmit)="submitForm()">
         <label for="departure">Départ</label>
         <input
           id="departure"
           type="text"
           placeholder="Paris, Pékin, ..."
+          [(ngModel)]="formData.departure_id"
+          name="departure"
+          required
         />
-        
+  
         <label for="arrival">Arrivée</label>
         <input
           id="arrival"
           type="text"
           placeholder="Paris, Pékin, ..."
+          [(ngModel)]="formData.arrival_id"
+          name="arrival"
+          required
         />
-        
+  
         <div class="dates">
-          <div class ="date-group">
+          <div class="date-group">
             <label for="departure-date">Aller</label>
-            <input id="dates" type="date" />
+            <input
+              id="departure-date"
+              type="date"
+              [(ngModel)]="formData.outbound_date"
+              name="outbound_date"
+              required
+            />
           </div>
           <div>
             <label for="return-date">Retour</label>
-            <input id="dates" type="date" />
+            <input
+              id="return-date"
+              type="date"
+              [(ngModel)]="formData.return_date"
+              name="return_date"
+            />
           </div>
         </div>
-        
+  
         <div class="passengers">
           <label>Passagers</label>
           <div class="passenger-types">
             <div>
               <span>Homme</span>
-              <input type="number" min="0" value="1" />
+              <input
+                type="number"
+                min="0"
+                [(ngModel)]="formData.adults"
+                name="adults"
+                required
+              />
             </div>
             <div>
               <span>Enfant</span>
-              <input type="number" min="0" value="0" />
+              <input
+                type="number"
+                min="0"
+                [(ngModel)]="formData.children"
+                name="children"
+              />
             </div>
             <div>
               <span>Animaux</span>
-              <input type="number" min="0" value="0" />
+              <input
+                type="number"
+                min="0"
+                [(ngModel)]="formData.animals"
+                name="animals"
+              />
             </div>
             <div>
               <span>Mobilité réduite</span>
-              <input type="number" min="0" value="0" />
+              <input
+                type="number"
+                min="0"
+                [(ngModel)]="formData.reduced_mobility"
+                name="reduced_mobility"
+              />
             </div>
           </div>
         </div>
@@ -52,6 +91,8 @@
         <button type="submit" class="btn-principal">Rechercher</button>
       </form>
     </div>
+  </div>
+  
     
     <div class="recommendations">
       <h2>Nos recommandations</h2>
