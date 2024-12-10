@@ -1,8 +1,7 @@
 import { NgFor } from '@angular/common';
 import { Component, NgModule } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaderResponse,HttpHeaders } from '@angular/common/http';
 import { FormsModule, NgModel } from '@angular/forms';
-
 type Recommendations = {
   destinations: string,
   description: string,
@@ -20,7 +19,7 @@ type Voyage = {
 @Component({
   selector: 'app-page-accueil',
   standalone: true,
-  imports: [NgFor,FormsModule],
+  imports: [NgFor,FormsModule,HttpHeaders],
   templateUrl: './page-accueil.component.html',
   styleUrl: './page-accueil.component.css'
 })
@@ -33,13 +32,15 @@ export class PageAccueilComponent {
     return_date: '', // Date de retour
     adults: 1, // Nombre d'adultes
     children: 0, // Nombre d'enfants
-    animals: 0, // Nombre d'animaux
-    reduced_mobility: 0, // Nombre de personnes à mobilité réduite
+    /*animals: 0, // Nombre d'animaux
+    reduced_mobility: 0, // Nombre de personnes à mobilité réduite*/
   };
   apiUrl = 'http://localhost:5000/search'
   constructor(private http: HttpClient) {}
 
  submitForm() {
+  const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
+
     // Requête POST
     this.http.post(this.apiUrl, this.formData).subscribe(
       (response) => {
@@ -50,7 +51,7 @@ export class PageAccueilComponent {
       }
     );
   }
-  
+
   //rechercheVoyages: Voyage[] = [];
 
   recommendations = [
