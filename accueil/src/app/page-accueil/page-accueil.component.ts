@@ -7,6 +7,7 @@ import {
   HttpHeaders,
 } from '@angular/common/http';
 import { FormsModule, NgModel } from '@angular/forms';
+import { RouterLink } from '@angular/router';
 type Recommendations = {
   destinations: string;
   description: string;
@@ -24,7 +25,7 @@ type Voyage = {
 @Component({
   selector: 'app-page-accueil',
   standalone: true,
-  imports: [NgFor, FormsModule],
+  imports: [NgFor, FormsModule,RouterLink],
   templateUrl: './page-accueil.component.html',
   styleUrl: './page-accueil.component.css',
 })
