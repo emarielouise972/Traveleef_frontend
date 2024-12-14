@@ -1,30 +1,33 @@
 import { NgFor } from '@angular/common';
 import { Component, NgModule } from '@angular/core';
-import { HttpClient, HttpHeaderResponse,HttpHeaders } from '@angular/common/http';
+import {
+  HttpClient,
+  HttpHeaderResponse,
+  HttpHeaders,
+} from '@angular/common/http';
 import { FormsModule, NgModel } from '@angular/forms';
 type Recommendations = {
-  destinations: string,
-  description: string,
-  image:string
-}
+  destinations: string;
+  description: string;
+  image: string;
+};
 type Voyage = {
-  id_voyage : number,
-  depart : string,
-  arrivee : string,
-  date_depart : Date,
-  date_arrivee : Date,
-  prix : number,
-}
+  id_voyage: number;
+  depart: string;
+  arrivee: string;
+  date_depart: Date;
+  date_arrivee: Date;
+  prix: number;
+};
 
 @Component({
   selector: 'app-page-accueil',
   standalone: true,
-  imports: [NgFor,FormsModule,HttpHeaders],
+  imports: [NgFor, FormsModule],
   templateUrl: './page-accueil.component.html',
-  styleUrl: './page-accueil.component.css'
+  styleUrl: './page-accueil.component.css',
 })
 export class PageAccueilComponent {
-
   formData = {
     departure_id: '', // Code pour le départ
     arrival_id: '', // Code pour l'arrivée
@@ -35,14 +38,14 @@ export class PageAccueilComponent {
     /*animals: 0, // Nombre d'animaux
     reduced_mobility: 0, // Nombre de personnes à mobilité réduite*/
   };
-  apiUrl = 'http://localhost:5000/search'
+  apiUrl = 'http://localhost:5000/search';
   constructor(private http: HttpClient) {}
 
- submitForm() {
-  const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
+  submitForm() {
+    const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
 
     // Requête POST
-    this.http.post(this.apiUrl, this.formData).subscribe(
+    this.http.post<Voyage[]>(this.apiUrl, this.formData,).subscribe(
       (response) => {
         console.log('Réponse du backend :', response);
       },
