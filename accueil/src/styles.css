@@ -1,176 +1,302 @@
 /* You can add global styles to this file, and also import other style files */
 .container {
-    max-width: 100%;
-    padding: 16px;
-    font-family: Mon, sans-serif;
-  }
-  
-  .search-section {
-    background-color: #e7f0dc;
-    padding: 16px;
-    border-radius: 8px;
-  
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-  
-      label {
-        font-weight: bold;
-        font-size: 14px;
-      }
-  
-      input {
-        width: 50%;
-        padding: 8px;
-        border: 1px solid #ccc;
-        border-radius: 20px;
-        font-size: 14px;
-      }
+  max-width: 100%;
+  padding: 16px;
+  font-family: Mon, sans-serif;
+}
 
-      .dates {
-        display: flex; /* Place les champs sur une seule ligne */
-        justify-content: space-between; /* Ajoute de l'espace entre les deux champs */
-        align-items: center; /* Aligne verticalement les champs */
-        gap: 16px; /* Ajoute un espace horizontal entre "Aller" et "Retour" */
-      
+.search-section {
+  background-color: #e7f0dc;
+  padding: 16px;
+  border-radius: 8px;
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    label {
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    input {
+      width: 50%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 20px;
+      font-size: 14px;
+    }
+
+    .dates {
+      display: flex; /* Place les champs sur une seule ligne */
+      justify-content: space-between; /* Ajoute de l'espace entre les deux champs */
+      align-items: center; /* Aligne verticalement les champs */
+      gap: 16px; /* Ajoute un espace horizontal entre "Aller" et "Retour" */
+
+      div {
+        display: flex;
+        flex-direction: column; /* Le label reste au-dessus de l'input */
+        flex: 1; /* Les deux champs prennent la même largeur */
+
+        label {
+          font-size: 14px;
+          font-weight: bold;
+          margin-bottom: 4px; /* Espacement entre le label et l'input */
+        }
+
+        input {
+          width: 100%; /* Chaque input occupe la largeur disponible */
+          padding: 8px;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          font-size: 14px;
+          box-sizing: border-box; /* Inclut le padding dans la largeur */
+        }
+      }
+    }
+
+    .passengers {
+      .passenger-types {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        gap: 8px;
+
         div {
           display: flex;
-          flex-direction: column; /* Le label reste au-dessus de l'input */
-          flex: 1; /* Les deux champs prennent la même largeur */
-      
-          label {
-            font-size: 14px;
-            font-weight: bold;
-            margin-bottom: 4px; /* Espacement entre le label et l'input */
-          }
-      
-          input {
-            width: 100%; /* Chaque input occupe la largeur disponible */
-            padding: 8px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            font-size: 14px;
-            box-sizing: border-box; /* Inclut le padding dans la largeur */
-          }
-        }
-      }
-      
-      
-  
-      .passengers {
-        .passenger-types {
-          display: flex;
-          justify-content: space-around;
           align-items: center;
-          gap: 8px;
-  
-          div {
-            display: flex;
-            align-items: center;
-            gap: 4px;
-  
-            input {
-              width: 40px;
-              text-align: center;
-            }
+          gap: 4px;
+
+          input {
+            width: 40px;
+            text-align: center;
           }
         }
       }
-  
-      .btn-principal {
-        background-color: #D9A87E;
+    }
+
+    .btn-principal {
+      background-color: #D9A87E;
+      border: none;
+      padding: 10px;
+      color: black;
+      font-weight: bold;
+      border-radius: 20px;
+      cursor: pointer;
+      width: 50%;
+      margin: auto;
+    }
+  }
+}
+
+.recommendations {
+  margin-top: 24px;
+
+  h2 {
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 16px;
+  }
+
+  .recommendation-card {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 16px;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+
+    .recommendation-content {
+      padding: 16px;
+
+      h3 {
+        font-size: 18px;
+        margin: 0;
+      }
+
+      p {
+        font-size: 14px;
+        margin: 8px 0;
+        color: #555;
+      }
+
+      .book-button {
+        background-color: #d4946d;
         border: none;
-        padding: 10px;
-        color: black;
+        padding: 8px;
+        color: white;
         font-weight: bold;
-        border-radius: 20px;
+        border-radius: 4px;
         cursor: pointer;
-        width: 50%;
-        margin: auto;
       }
     }
   }
-  
-  .recommendations {
-    margin-top: 24px;
-  
-    h2 {
-      text-align: center;
-      font-size: 20px;
-      margin-bottom: 16px;
-    }
-  
-    .recommendation-card {
-      display: flex;
-      flex-direction: column;
-      background-color: white;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      overflow: hidden;
-      margin-bottom: 16px;
-  
-      img {
-        width: 100%;
-        height: auto;
-      }
-  
-      .recommendation-content {
-        padding: 16px;
-        
-        h3 {
-          font-size: 18px;
-          margin: 0;
-        }
-  
-        p {
-          font-size: 14px;
-          margin: 8px 0;
-          color: #555;
-        }
-  
-        .book-button {
-          background-color: #d4946d;
-          border: none;
-          padding: 8px;
-          color: white;
-          font-weight: bold;
-          border-radius: 4px;
-          cursor: pointer;
-        }
-      }
-    }
-  }
-  
-  /* Responsive Design for iPhone 16 */
-  @media (max-width: 480px) {
-    .search-section {
-      padding: 12px;
-  
-      form {
+}
+
+/* Responsive Design for iPhone 16 */
+@media (max-width: 480px) {
+  .search-section {
+    padding: 12px;
+
+    form {
+      gap: 12px;
+
+      .dates {
+        flex-direction: column;
         gap: 12px;
-  
-        .dates {
-          flex-direction: column;
-          gap: 12px;
-        }
-  
-        .passengers .passenger-types {
-          flex-wrap: wrap;
-  
-          div {
-            flex: 1 1 45%;
-          }
-        }
       }
-    }
-  
-    .recommendation-card {
-      flex-direction: column;
-  
-      img {
-        height: 200px;
-        object-fit: cover;
+
+      .passengers .passenger-types {
+        flex-wrap: wrap;
+
+        div {
+          flex: 1 1 45%;
+        }
       }
     }
   }
+
+  .recommendation-card {
+    flex-direction: column;
+
+    img {
+      height: 200px;
+      object-fit: cover;
+    }
+  }
+}
+
+/* --- Styles pour le header --- */
+.main-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background-color: white;
+}
+/*
+.logo h1 {
+  font-size: 2rem;
+  font-family: 'Arial', sans-serif;
+  color: black;
+}
+*/
+
+
+.off-screen-menu {
+  background-color: #B9C9AA;
+  height: 100vh;
+  width: 100%;
+  max-width: 450px;
+  position: fixed;
+  top: 0;
+  right: -450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  transition: 0.3s;
+}
+
+.off-screen-menu.active {
+  right: 0;
+}
+
+/*
+nav {
+  padding: 1rem;
+  display: flex;
+  background-color: #B9C9AA;
+} */
+
+.nav-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Espacement entre les éléments */
+  padding: 0.5rem 1rem;
+  background-color: #B9C9AA;
+  width: 100%; /* Assure que la barre prend toute la largeur de l'écran */
+  height: 60px; /* Hauteur fixe de la barre de navigation */
+  box-sizing: border-box; /* Inclut les paddings dans la hauteur totale */
+  position: relative;
+}
+
+/* Logo */
+.logo img {
+  margin-top: 1%;
+  height: 15%; /* Ajuste la taille du logo */
+  width: 15%; /* Conserve le ratio */
+  margin-right: 1rem; /* Espace après le logo */
+}
+
+/* Menu principal */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1rem; /* Espacement entre les éléments */
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  font-size: 1.2rem;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.nav-links li:hover {
+  color: purple; /* Couleur au survol */
+}
+
+.ham-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 24px; /* Hauteur totale du bouton */
+  width: 30px; /* Largeur du bouton */
+  cursor: pointer;
+  margin-left: auto; /* Aligne le bouton à droite */
+  align-self: center; /* Assure que le bouton reste verticalement centré */
+  margin-right: 4%;
+}
+
+
+.ham-menu span {
+  display: block;
+  height: 4px;
+  width: 250%;
+  background-color: purple;
+  border-radius: 2px;
+
+}
+
+.ham-menu span:nth-child(1) {
+  top: 25%;
+}
+
+.ham-menu span:nth-child(3) {
+  top: 75%;
+}
+
+.ham-menu.active span:nth-child(1) {
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.ham-menu.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.ham-menu.active span:nth-child(3) {
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
