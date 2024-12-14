@@ -2,6 +2,7 @@ import { NgFor } from '@angular/common';
 import { Component, NgModule } from '@angular/core';
 import {
   HttpClient,
+  HttpParams,
   HttpHeaderResponse,
   HttpHeaders,
 } from '@angular/common/http';
@@ -40,12 +41,12 @@ export class PageAccueilComponent {
   };
   apiUrl = 'http://localhost:5000/search';
   constructor(private http: HttpClient) {}
-
+  
   submitForm() {
     const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
 
     // Requête POST
-    this.http.post<Voyage[]>(this.apiUrl, this.formData,).subscribe(
+    this.http.post<Voyage[]>(this.apiUrl, this.formData, { headers }).subscribe(
       (response) => {
         console.log('Réponse du backend :', response);
       },
@@ -55,7 +56,30 @@ export class PageAccueilComponent {
     );
   }
 
-  //rechercheVoyages: Voyage[] = [];
+/*
+  voyages: any[] = [];
+  submitForm() {
+    // Convertir formData en paramètres d'URL
+    const params = new HttpParams()
+      .set('departure_id', this.formData.departure_id)
+      .set('arrival_id', this.formData.arrival_id)
+      .set('outbound_date', this.formData.outbound_date)
+      .set('return_date', this.formData.return_date || '') // Optionnel
+      .set('adults', this.formData.adults.toString())
+      .set('children', this.formData.children.toString());
+
+    // Effectuer la requête GET avec les paramètres
+    
+    this.http.get<Voyage[]>(this.apiUrl, { params }).subscribe(
+      (response) => {
+        console.log('Résultats API :', response);
+        this.voyages = response; // Mise à jour des résultats
+      },
+      (error) => {
+        console.error('Erreur lors de la requête :', error);
+      }
+    );*/
+  //}
 
   recommendations = [
     {
@@ -71,10 +95,10 @@ export class PageAccueilComponent {
       image: 'accueil/public/maldive.jpg',
     },
   ];
-
-  /*ngOnInit() {
+  /*
+  ngOnInit() {
     this.http.get<Voyage[]>('http://localhost:5000/search').subscribe((data) => {
-      this.rechercheVoyages = data;
+      this.voyages = data;
     });
   }*/
 }
