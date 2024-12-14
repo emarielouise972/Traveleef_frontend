@@ -301,7 +301,7 @@ nav {
   cursor: pointer;
   margin-left: auto; /* Aligne le bouton à droite */
   align-self: center; /* Assure que le bouton reste verticalement centré */
-  margin-right: 4%;
+  margin-right: 25px;
   z-index: 100;
 }
 
@@ -310,6 +310,7 @@ nav {
   display: block;
   height: 4px;
   width: 250%;
+  max-width: 50px;
   background-color: purple;
   border-radius: 2px;
 
@@ -320,7 +321,7 @@ nav {
 }
 
 .ham-menu.active span:nth-child(3) {
-  transform: rotate(-45deg) translate(5px, -5px); /* Croise la dernière barre */
+  transform: rotate(-45deg) translate(10px, -7px); /* Croise la dernière barre */
 }
 
 
@@ -369,4 +370,11 @@ nav {
   color: purple; /* Couleur au survol */
 }
 
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  color: purple;
+}
 
