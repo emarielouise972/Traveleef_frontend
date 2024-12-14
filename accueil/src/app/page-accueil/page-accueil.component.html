@@ -1,12 +1,15 @@
-<p>page-accueil works!</p>
 <div class="container">
+  <div class="container">
     <div class="search-section">
-      <form>
+      <form (ngSubmit)="submitForm()">
         <label for="departure">Départ</label>
         <input
           id="departure"
           type="text"
           placeholder="Paris, Pékin, ..."
+          [(ngModel)]="formData.departure_id"
+          name="departure"
+          required
         />
 
         <label for="arrival">Arrivée</label>
@@ -14,16 +17,30 @@
           id="arrival"
           type="text"
           placeholder="Paris, Pékin, ..."
+          [(ngModel)]="formData.arrival_id"
+          name="arrival"
+          required
         />
 
         <div class="dates">
-          <div class ="date-group">
+          <div class="date-group">
             <label for="departure-date">Aller</label>
-            <input id="dates" type="date" />
+            <input
+              id="departure-date"
+              type="date"
+              [(ngModel)]="formData.outbound_date"
+              name="outbound_date"
+              required
+            />
           </div>
           <div>
             <label for="return-date">Retour</label>
-            <input id="dates" type="date" />
+            <input
+              id="return-date"
+              type="date"
+              [(ngModel)]="formData.return_date"
+              name="return_date"
+            />
           </div>
         </div>
 
@@ -32,49 +49,60 @@
           <div class="passenger-types">
             <div>
               <span>Homme</span>
-              <input type="number" min="0" value="1" />
+              <input
+                type="number"
+                min="0"
+                [(ngModel)]="formData.adults"
+                name="adults"
+                required
+              />
             </div>
             <div>
               <span>Enfant</span>
-              <input type="number" min="0" value="0" />
+              <input
+                type="number"
+                min="0"
+                [(ngModel)]="formData.children"
+                name="children"
+              />
             </div>
+            <!--
             <div>
               <span>Animaux</span>
-              <input type="number" min="0" value="0" />
+              <input
+                type="number"
+                min="0"
+                [(ngModel)]="formData.animals"
+                name="animals"
+              />
             </div>
             <div>
               <span>Mobilité réduite</span>
-              <input type="number" min="0" value="0" />
-            </div>
+              <input
+                type="number"
+                min="0"
+                [(ngModel)]="formData.reduced_mobility"
+                name="reduced_mobility"
+              />
+            </div>-->
           </div>
         </div>
 
         <button type="submit" class="btn-principal">Rechercher</button>
       </form>
     </div>
+  </div>
+
 
     <div class="recommendations">
       <h2>Nos recommandations</h2>
-      <p>azeaze</p>
-      <!--
-      <div class="recommendation-card" *ngFor="let destination of recommendations">
-        <img src="assets/maldives.jpg" alt="Image des Maldives" />
+      <div class="recommendation-card" *ngFor="let item of recommendations">
+        <img src= "accueil/public/maldive.jpg" />
         <div class="recommendation-content">
-          <h3>Maldives</h3>
-          <p>
-            Plages de sable blanc, lagons turquoise et couchers de soleil spectaculaires : les Maldives sont un rêve exotique inoubliable.
-          </p>
-          <button class="btn-principal">Réserver</button>
+          <h3>{{ item.title }}</h3>
+          <p>{{ item.description }}</p>
+          <button class="book-button">Réserver</button>
         </div>
-      </div>-->
-      <div class="recommendation-card">
-        <!--@for ( let destination of recommandations; track $index){-->
-          <div><!--
-            <img src={{recommendations.image}} />
-            <h3>{{recommendations.destination}}</h3>
-            <p>{{recommendations.description}}</p>-->
-          </div>
-        <!--}-->
       </div>
     </div>
   </div>
