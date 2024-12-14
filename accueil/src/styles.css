@@ -395,7 +395,7 @@ a:hover {
 /* Changer de transport */
 .transport-header {
   text-align: center;
-  background-color: #e8f5e9;
+  background-color: #C9DDB0;
   padding: 10px;
   border-radius: 8px;
 }
@@ -414,7 +414,9 @@ a:hover {
 .flight-list h3 {
   color: black;
   margin-bottom: 10px;
+  text-align: center;
 }
+
 .flight-list {
   background-color: #C9DDB0;
 }
