@@ -472,3 +472,30 @@ a:hover {
   border-radius: 5px;
   cursor: pointer;
 }
+.sort-buttons {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 15px;
+}
+
+.sort-buttons button {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  padding: 5px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+.sort-buttons button.active {
+  background-color: #B9C9AA;
+  color: white;
+  border-color: #B9C9AA;
+}
+
+.sort-buttons button:hover {
+  background-color: #C9DDB0;
+  color: white;
+}

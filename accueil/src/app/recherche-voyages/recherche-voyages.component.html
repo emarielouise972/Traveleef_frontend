@@ -1,53 +1,61 @@
-<p>recherche-voyages works!</p>
+
 <div class="container">
-    <!-- Barre de filtres -->
-    <div class="filter-bar">
-      <span class="filter"><strong>Filtre:</strong> <span>CO2</span> <span>Prix</span> <span>Temps</span></span>
-    </div>
-  
-    <!-- Changer de transport -->
-    <div class="transport-header">
-      <h2>Changer de transport</h2>
-      <div class="icons">
-        <!-- Ajoutez des icônes avec des images ou une librairie comme FontAwesome -->
-        <span>🚗</span>
-        <span>🚌</span>
-        <span>🚆</span>
-        <span>✈️</span>
+  <!-- Barre de filtres -->
+  <div class="filter-bar">
+    <span class="filter">
+        <span class="filter"><strong>Filtre:</strong></span>
+      <div class="sort-buttons">
+        <button>CO2</button>
+        <button>Prix</button>
+        <button>Temps</button>
       </div>
-    </div>
-  
-    <!-- Liste des vols -->
-    <div class="flight-list">
-        <h3>Réserver un voyage en Avion</h3>
-      
-        <!-- Utilisation d'un *ngFor pour afficher chaque vol -->
-        <div class="flight-card" *ngFor="let flight of flights">
-          <div class="flight-info">
-            <h4>
-              <strong>Vol</strong> 
-              <span>{{ flight.outbound_date }} - {{ flight.return_date }}</span>
-            </h4>
-            <p>
-              <strong>Départ:</strong>
-              <span class="highlight">{{ flight.departure_id }}</span>
-            </p>
-            <p>
-              <strong>Arrivée:</strong>
-              <span class="highlight">{{ flight.arrival_id }}</span>
-            </p>
-          </div>
-          <div class="price">
-            <p><strong>{{ flight.price }}€</strong></p>
-            <button class="view-button">Voir</button>
-          </div>
-        </div>
-      </div>
-      
-  
-    <!-- Bouton retour -->
-    <div class="back-button">
-      <button>&larr; Retour</button>
+    </span>
+  </div>
+
+  <!-- Changer de transport -->
+  <div class="transport-header">
+    <h2>Changer de transport</h2>
+    <div class="icons">
+      <!-- Ajoutez des icônes avec des images ou une librairie comme FontAwesome -->
+      <span>🚗</span>
+      <span>🚌</span>
+      <span>🚆</span>
+      <span>✈️</span>
     </div>
   </div>
-  
+
+  <!-- Liste des vols -->
+  <div class="flight-list">
+    <h3>Réserver un voyage en Avion</h3>
+
+    <!-- Utilisation d'un *ngFor pour afficher chaque vol -->
+    <!--<div class="flight-card" *ngFor="let flight of flights">
+      <div class="flight-info">
+        <span>{{ flight.emissions }}</span>
+        <h4>
+          <strong>Vol</strong>
+          <span>{{ flight.outbound_date }} - {{ flight.return_date }}</span>
+        </h4>
+        <p>
+          <strong>Départ:</strong>
+          <span class="highlight">{{ flight.departure_id }}</span>
+        </p>
+        <p>
+          <strong>Arrivée:</strong>
+          <span class="highlight">{{ flight.arrival_id }}</span>
+        </p>
+      </div>
+      <div class="price">
+        <p>
+          <strong>{{ flight.price }}€</strong>
+        </p>
+        <button class="view-button">Voir</button>
+      </div>
+   </div>-->
+  </div>
+
+  <!-- Bouton retour -->
+  <div class="back-button">
+    <button>&larr; Retour</button>
+  </div>
+</div>
