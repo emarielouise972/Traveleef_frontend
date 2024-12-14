@@ -225,3 +225,148 @@
       align-items: center;
     }
   }
+
+
+/* --- Styles pour le header --- */
+.main-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background-color: white;
+}
+/*
+.logo h1 {
+  font-size: 2rem;
+  font-family: 'Arial', sans-serif;
+  color: black;
+}
+*/
+
+
+
+/*
+nav {
+  padding: 1rem;
+  display: flex;
+  background-color: #B9C9AA;
+} */
+
+.nav-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Espacement entre les éléments */
+  padding: 0.5rem 1rem;
+  background-color: #B9C9AA;
+  width: 100%; /* Assure que la barre prend toute la largeur de l'écran */
+  height: 60px; /* Hauteur fixe de la barre de navigation */
+  box-sizing: border-box; /* Inclut les paddings dans la hauteur totale */
+  position: relative;
+}
+
+/* Logo */
+.logo img {
+  margin-top: 1%;
+  height: 15%; /* Ajuste la taille du logo */
+  width: 15%; /* Conserve le ratio */
+  margin-right: 1rem; /* Espace après le logo */
+}
+
+/* Menu principal */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1rem; /* Espacement entre les éléments */
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  font-size: 1.2rem;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.nav-links li:hover {
+  color: purple; /* Couleur au survol */
+}
+
+.ham-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 24px; /* Hauteur totale du bouton */
+  width: 30px; /* Largeur du bouton */
+  cursor: pointer;
+  margin-left: auto; /* Aligne le bouton à droite */
+  align-self: center; /* Assure que le bouton reste verticalement centré */
+  margin-right: 4%;
+  z-index: 100;
+}
+
+
+.ham-menu span {
+  display: block;
+  height: 4px;
+  width: 250%;
+  background-color: purple;
+  border-radius: 2px;
+
+}
+
+.ham-menu.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px); /* Croise la première barre */
+}
+
+.ham-menu.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px); /* Croise la dernière barre */
+}
+
+
+
+.ham-menu.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.off-screen-menu {
+  background-color: #B9C9AA;
+  height: auto; /* Réduit la hauteur à 60% de l'écran */
+  width: 100%; /* Prend toute la largeur de l'écran */
+  max-width: none; /* Enlève la limite maximale de largeur */
+  position: fixed;
+  top: -60%; /* Cache le menu en haut de l'écran */
+  left: 0; /* Aligne le menu à gauche */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 1.5rem; /* Ajuste la taille du texte */
+  border-radius: 8px; /* Coins arrondis */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Ombre pour un meilleur contraste */
+  transition: top 0.3s ease-in-out; /* Animation pour la descente */
+  z-index: 90;
+}
+
+.off-screen-menu.active {
+  top: 0; /* Quand activé, le menu descend */
+}
+
+.off-screen-menu ul {
+  list-style: none;
+  padding: 1rem;
+  margin: 0;
+}
+
+.off-screen-menu li {
+  font-size: 1.5rem;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.off-screen-menu li:hover {
+  color: purple; /* Couleur au survol */
+}
+
+
