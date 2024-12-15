@@ -1,5 +1,5 @@
 import {Component, ElementRef, Renderer2} from '@angular/core';
-import {RouterLink} from '@angular/router';
+import {RouterLink, RouterLinkActive} from '@angular/router';
 import {NgOptimizedImage} from '@angular/common';
 
 @Component({
@@ -7,7 +7,8 @@ import {NgOptimizedImage} from '@angular/common';
   standalone: true,
   imports: [
     RouterLink,
-    NgOptimizedImage
+    NgOptimizedImage,
+    RouterLinkActive
   ],
   templateUrl: './header.component.html',
   styleUrl: './header.component.css'
