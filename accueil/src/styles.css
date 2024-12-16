@@ -264,6 +264,7 @@ nav {
   height: 15%; /* Ajuste la taille du logo */
   width: 15%; /* Conserve le ratio */
   margin-right: 1rem; /* Espace après le logo */
+  max-height: 300px;
 }
 
 /* Menu principal */
