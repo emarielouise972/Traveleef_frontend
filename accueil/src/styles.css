@@ -30,7 +30,7 @@
   margin: 0;
 }
 
-.rayan_air {
+.ryan_air {
   background-color: #E91E63; /* Couleur rose pour le logo */
   color: #fff;
   font-size: 0.9em;
@@ -45,6 +45,11 @@
   position: absolute;
   top: -10px;
   right: -10px;
+
+}
+
+.ryan_air span {
+  margin-left: 5px;
 }
 
 /* Détails du trajet */
