@@ -184,26 +184,29 @@ img {
 
 .footer {
   background-color: #e7f0dc; /* Couleur de fond verte */
-
   font-family: Arial, sans-serif;
   font-size: 14px;
   color: black;
   display: flex;
-  justify-content: space-between;
   align-items: center;
   border-top: 1px solid #ccc;
+  padding: 10px 20px;
+  justify-content: center;
 }
 
 .footer-content {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 5px;
+  margin-top: 5px;
 }
 
 .footer-contact {
   display: flex;
-
   font-weight: bold;
+  margin-top: 5px;
 }
 
 .footer-contact span {
@@ -264,6 +267,7 @@ nav {
   height: 15%; /* Ajuste la taille du logo */
   width: 15%; /* Conserve le ratio */
   margin-right: 1rem; /* Espace après le logo */
+  max-height: 300px;
 }
 
 /* Menu principal */

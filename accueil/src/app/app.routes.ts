@@ -8,6 +8,12 @@ export const routes: Routes = [
         path:'page-accueil',
         component:PageAccueilComponent,
     },
+
+    {
+      path: 'recherche-voyages',
+      component: RechercheVoyagesComponent
+    },
+
     {
         path:'recherche-voyages',
         component:RechercheVoyagesComponent

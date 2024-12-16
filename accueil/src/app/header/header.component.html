@@ -2,7 +2,9 @@
 
   <nav class="nav-bar">
     <div class="logo">
+      <a [routerLink]="['/']">
       <img src="assets/images/LogoTraveleef.png" alt="Logo de l'application" />
+      </a>
     </div>
 
 
@@ -14,10 +16,10 @@
   </nav>
 
 
-  <div class="off-screen-menu">
+  <div class="off-screen-menu" >
     <ul>
-      <a [routerLink]="['/']" routerLinkActive="active">Accueil</a>
-      <li>about</li>
+      <li><a [routerLink]="['/']" routerLinkActive="active">Accueil</a></li>
+      <li><a [routerLink]="['/recherche-voyages']" routerLinkActive="active">Recherche</a></li>
       <li>contact</li>
     </ul>
 

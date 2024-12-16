@@ -42,7 +42,7 @@ export class PageAccueilComponent {
   };
   apiUrl = 'http://localhost:5000/search';
   constructor(private http: HttpClient) {}
-  
+
   submitForm() {
     const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
 
@@ -70,7 +70,7 @@ export class PageAccueilComponent {
       .set('children', this.formData.children.toString());
 
     // Effectuer la requête GET avec les paramètres
-    
+
     this.http.get<Voyage[]>(this.apiUrl, { params }).subscribe(
       (response) => {
         console.log('Résultats API :', response);
