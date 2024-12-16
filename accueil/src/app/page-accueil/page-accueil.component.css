@@ -1,0 +1,184 @@
+/* You can add global styles to this file, and also import other style files */
+.container {
+  max-width: 100%;
+  padding: 16px;
+  font-family: Mon, sans-serif;
+}
+
+.search-section {
+  background-color: #e7f0dc;
+  padding: 16px;
+  border-radius: 8px;
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    label {
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    input {
+      width: 50%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 20px;
+      font-size: 14px;
+    }
+
+    .dates {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 16px;
+    }
+
+    .dates div {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .dates div input {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      font-size: 14px;
+      box-sizing: border-box;
+    }
+
+    @media screen and (max-width: 430px) {
+      .dates {
+        flex-direction: column;
+        gap: 12px;
+      }
+    }
+
+    .passengers {
+      .passenger-types {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        gap: 8px;
+
+        div {
+          display: flex;
+          align-items: center;
+          gap: 4px;
+
+          input {
+            width: 40px;
+            text-align: center;
+          }
+        }
+      }
+    }
+
+    .btn-principal {
+      background-color: #d9a87e;
+      border: none;
+      padding: 10px;
+      color: black;
+      font-weight: bold;
+      border-radius: 20px;
+      cursor: pointer;
+      width: 50%;
+      margin: auto;
+    }
+  }
+}
+
+.recommendations {
+  margin-top: 24px;
+  font-family: Arial, sans-serif;
+}
+
+.recommendations h2 {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 24px;
+  font-weight: bold;
+}
+img {
+  width: 85%;
+  height: 100%;
+  object-fit: cover;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+.recommendation-card {
+  display: flex;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 16px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  align-items: center;
+}
+
+.recommendation-card img {
+  width: 150px;
+  height: 100%;
+  object-fit: cover;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  margin-left: 10px;
+}
+
+.recommendation-content {
+  padding: 16px;
+  flex: 1;
+}
+
+.recommendation-content h3 {
+  font-size: 18px;
+  margin: 0;
+  font-weight: bold;
+}
+
+.recommendation-content p {
+  font-size: 14px;
+  margin: 8px 0;
+  color: #555;
+}
+
+.book-button {
+  background-color: #d4946d;
+  border: none;
+  padding: 8px 16px;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  color: black;
+}
+
+.book-button:hover {
+  background-color: #c2845d;
+}
+
+/* Responsive Design for iPhone 16 */
+@media (max-width: 480px) {
+  .search-section {
+    padding: 12px;
+
+    form {
+      gap: 12px;
+
+      .dates {
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .passengers .passenger-types {
+        flex-wrap: wrap;
+
+        div {
+          flex: 1 1 45%;
+        }
+      }
+    }
+  }
+}

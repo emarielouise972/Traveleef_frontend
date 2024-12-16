@@ -1,27 +1,27 @@
 <div class="reservation-card">
     <div class="card-header">
       <h2>15h-21h</h2>
-      <div class="logo">
+      <div class="rayan_air">
         <span>Ryan Air</span>
       </div>
     </div>
-  
+
     <div class="card-details">
       <p><strong>Départ:</strong></p>
       <p>Paris, Gare du nord <span class="highlight-time">15h</span></p>
-  
+
       <p><strong>Arrivée:</strong></p>
       <p>Bruxelles <span class="highlight-time">21h</span></p>
-  
-      <p><strong>Empreinte carbone:</strong> <span class="co2">29Kg CO2</span></p>
-  
+
+      <p><strong>Empreinte carbone:</strong> <span class="co2"> 29Kg CO2</span></p>
+
       <p><strong>Prix:</strong> <span class="price">148€</span></p>
     </div>
-  
+
     <button class="reserve-button">Réserver</button>
   </div>
-  
+
   <div class="back-button">
-    <button class="circle-button">&#x21A9;</button>
+    <button class="circle-button" [routerLink]="['/recherche-voyages']" routerLinkActive="active" >&#x21A9;</button>
   </div>
-  
+
