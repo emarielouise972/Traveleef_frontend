@@ -411,52 +411,85 @@ a:hover {
 }
 
 /* Liste des vols */
-.flight-list h3 {
-  color: black;
-  margin-bottom: 10px;
-  text-align: center;
-}
-
+/* Conteneur principal */
 .flight-list {
+  margin-top: 5%;
   background-color: #C9DDB0;
+  padding: 15px;
+  border-radius: 5px;
 }
 
+.flight-list h3 {
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  font-style: italic;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+/* Carte de vol */
 .flight-card {
-  background-color: #fff;
   display: flex;
   justify-content: space-between;
-  border: 1px solid #ddd;
-  border-radius: 8px;
+  align-items: center;
+  background-color: #fff;
   margin-bottom: 15px;
-  padding: 10px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 15px;
 }
 
 .flight-info h4 {
   margin: 0;
+  font-size: 1.1em;
+  color: #333;
+}
+
+.flight-info .time {
+  font-size: 0.9em;
+  font-style: italic;
+  color: #668;
+  margin-left: 10px;
 }
 
 .flight-info p {
   margin: 5px 0;
+  font-size: 0.9em;
 }
 
-.highlight {
+.flight-info .highlight {
   font-weight: bold;
   color: #333;
 }
 
+/* Prix et bouton */
 .price {
   text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+}
+.co2 {
+  margin-left: 10px;
+}
+.price p {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 0 0 10px;
+
 }
 
-.price p {
-  font-size: 20px;
-  font-weight: bold;
-  margin: 0 0 5px 0;
+.view-button {
+  background-color: #d9a87e;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
+
+.view-button:hover {
+  background-color: #b38362;
+}
+
 
 .view-button {
   background-color: #d9a87e;
@@ -501,3 +534,113 @@ a:hover {
   background-color: #C9DDB0;
   color: white;
 }
+/*-----------detail--------------*/
+/*
+/* Carte principale 
+.reservation-card {
+  background-color: #E0E9D5;
+  border-radius: 10px;
+  padding: 15px;
+  width: 280px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+  margin: 20px auto;
+  position: relative;
+}
+
+/* En-tête de la carte 
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-header h2 {
+  font-size: 1.3em;
+  font-weight: bold;
+  margin: 0;
+}
+
+.logo {
+  background-color: #E91E63; /* Couleur rose pour le logo 
+  color: #fff;
+  font-size: 0.9em;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: -10px;
+  right: -10px;
+}
+
+/* Détails du trajet 
+.card-details p {
+  margin: 8px 0;
+  font-size: 0.95em;
+}
+
+.card-details .highlight-time {
+  font-weight: bold;
+  color: #333;
+  margin-left: 5px;
+}
+
+.card-details .co2 {
+  font-weight: bold;
+  color: #4CAF50;
+}
+
+.card-details .price {
+  font-weight: bold;
+  font-size: 1.1em;
+  color: #333;
+}
+
+/* Bouton réserver 
+.reserve-button {
+  background-color: #D9A87E;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  width: 100%;
+  text-align: center;
+  margin-top: 10px;
+  transition: background-color 0.3s;
+}
+
+.reserve-button:hover {
+  background-color: #B38362;
+}
+
+/* Bouton retour 
+.back-button {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.circle-button {
+  background-color: #D9A87E;
+  color: #333;
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 1.5em;
+  cursor: pointer;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s;
+}
+
+.circle-button:hover {
+  background-color: #B38362;
+}*/

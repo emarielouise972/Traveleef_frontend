@@ -1,9 +1,8 @@
-
 <div class="container">
   <!-- Barre de filtres -->
   <div class="filter-bar">
     <span class="filter">
-        <span class="filter"><strong>Filtre:</strong></span>
+      <span class="filter"><strong>Filtre:</strong></span>
       <div class="sort-buttons">
         <button>CO2</button>
         <button>Prix</button>
@@ -14,7 +13,6 @@
 
   <!-- Changer de transport -->
   <div class="transport-header">
-    
     <h2>Changer de transport</h2>
     <div class="icons">
       <!-- Ajoutez des icônes avec des images ou une librairie comme FontAwesome -->
@@ -29,8 +27,75 @@
   <div class="flight-list">
     <h3>Réserver un voyage en Avion</h3>
 
-    <!-- Utilisation d'un *ngFor pour afficher chaque vol -->
-    <!--<div class="flight-card" *ngFor="let flight of flights">
+    <!-- Vol 1 -->
+    <div class="flight-card">
+      <div class="flight-info">
+        <h4>
+          <strong>Ryan Air</strong> <span class="time">15H - 21H</span>
+          <span class="c02"> CO2 : 29 KG</span>
+        </h4>
+        <p>
+          <strong>Départ :</strong> Gare du Nord
+          <span class="highlight">Paris</span>
+        </p>
+        <p>
+          <strong>Arrivée :</strong> 38 rue de Bruxelles
+          <span class="highlight">Bruxelles</span>
+        </p>
+      </div>
+      <div class="price">
+        <p><strong>148€</strong></p>
+        <button class="view-button" routerLink="detail">Voir</button>
+      </div>
+    </div>
+
+    <!-- Vol 2 -->
+    <div class="flight-card">
+      <div class="flight-info">
+        <h4>
+          <strong>Air France</strong> <span class="time">3H - 9H</span>
+          <span class="c02">CO2 : 28 KG</span>
+        </h4>
+        <p>
+          <strong>Départ :</strong> 55 rue de Bagnolet
+          <span class="highlight">Bagnolet</span>
+        </p>
+        <p>
+          <strong>Arrivée :</strong> 28 Av de la Meilée
+          <span class="highlight">Bruxelles</span>
+        </p>
+      </div>
+      <div class="price">
+        <p><strong>204€</strong></p>
+        <button class="view-button" routerLink="detail">Voir</button>
+      </div>
+    </div>
+
+    <!-- Vol 3 -->
+    <div class="flight-card">
+      <div class="flight-info">
+        <h4>
+          <strong>Ryan Air</strong> <span class="time">10H - 14H</span>
+          <span class="c02">CO2 : 35 KG</span>
+        </h4>
+        <p>
+          <strong>Départ :</strong> Aéroport Charles de Gaulle
+          <span class="highlight">Roissy</span>
+        </p>
+        <p>
+          <strong>Arrivée :</strong> 28 Av de la Meilée
+          <span class="highlight" >Bruxelles centre</span>
+        </p>
+      </div>
+      <div class="price">
+        <p><strong>159€</strong></p>
+        <button class="view-button" routerLink="detail">Voir</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Utilisation d'un *ngFor pour afficher chaque vol -->
+  <!--<div class="flight-card" *ngFor="let flight of flights">
       <div class="flight-info">
         <span>{{ flight.emissions }}</span>
         <h4>
@@ -53,10 +118,9 @@
         <button class="view-button">Voir</button>
       </div>
    </div>-->
-  </div>
 
   <!-- Bouton retour -->
   <div class="back-button">
-    <button>&larr; Retour</button>
+    <button routerLink="page-accueil">&larr; Retour</button>
   </div>
 </div>
