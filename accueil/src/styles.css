@@ -395,7 +395,7 @@ a:hover {
 /* Changer de transport */
 .transport-header {
   text-align: center;
-  background-color: #e8f5e9;
+  background-color: #C9DDB0;
   padding: 10px;
   border-radius: 8px;
 }
@@ -414,7 +414,9 @@ a:hover {
 .flight-list h3 {
   color: black;
   margin-bottom: 10px;
+  text-align: center;
 }
+
 .flight-list {
   background-color: #C9DDB0;
 }
@@ -471,4 +473,31 @@ a:hover {
   padding: 10px 15px;
   border-radius: 5px;
   cursor: pointer;
+}
+.sort-buttons {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 15px;
+}
+
+.sort-buttons button {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  padding: 5px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+.sort-buttons button.active {
+  background-color: #B9C9AA;
+  color: white;
+  border-color: #B9C9AA;
+}
+
+.sort-buttons button:hover {
+  background-color: #C9DDB0;
+  color: white;
 }
